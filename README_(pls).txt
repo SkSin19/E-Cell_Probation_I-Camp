@@ -1,0 +1,1 @@
+index.html is the hero section - use it to call the other sections as you guys make it with a <section> tag with an "id" attribut - to make the navbar work properly. maintain a proper folder structure as you work as it makes things easier for yourself and everyone.
