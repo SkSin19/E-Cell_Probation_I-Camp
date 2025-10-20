@@ -135,3 +135,6 @@ const registerUser = async (req, res) => {
     });
   }
 };
+
+//export
+module.exports={registerUser}
