@@ -34,7 +34,7 @@ npm install
 3. Create .env file in the root directory:
 ```bash
 PORT=8000
-MONGO_URL=mongodb+srv://uixphuke:E-Cell_Probation_I-Camp@cluster0.ifu7ahd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+MONGO_URL=<MONGO_URL>
 
 ```
 
