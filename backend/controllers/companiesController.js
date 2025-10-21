@@ -36,12 +36,12 @@ const registerCompany = async (req, res) => {
       internshipType 
     });
 
-    res.status(201).json({
-      success: true,
-      message: "Company registered successfully!",
-      token: generateToken(company._id),
-      data: company,
-    });
+      res.status(201).json({
+        success: true,
+        message: "Company registered successfully!",
+        token: generateToken(company._id),
+        data: company.toJSON(),
+      });
   } catch (error) {
     res.status(500).json({ success: false, message: "Error registering company.", error: error.message });
   }

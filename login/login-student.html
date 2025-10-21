@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="login-student.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="background">
+      <div class="login-container student">
+        <p class="heading">LOGIN</p>
+        
+        <div class="phone">
+          <label for="emailOrPhone">Email or Phone Number:</label>
+          <div class="phone-input">
+            <input
+              type="text"
+              class="phone-input-box"
+              id="emailOrPhone"
+              placeholder="Enter email or 10-digit number"
+            />
+          </div>
+        </div>
+
+        <div class="phone">
+          <label for="password">Password:</label>
+          <div class="phone-input">
+            <input
+              type="password"
+              class="phone-input-box"
+              id="password"
+              placeholder="Enter password"
+            />
+          </div>
+        </div>
+
+        <div class="submit">
+          <button class="submit-button" onclick="validateForm()">Login</button>
+        </div>
+      </div>
+      
+    </div>
+    <script src="login-student.js"></script>
+  </body>
+</html>

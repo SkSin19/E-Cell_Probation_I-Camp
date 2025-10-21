@@ -12,8 +12,8 @@
             <span>Be Yourself</span>
         </h1>
 
-        <div>
-            <a href="/registration/start.html">Register</a>
+        <div class="button-container" id="loginButtonContainer">
+            <button class="hero-button" onclick="window.location.href='/login/start.html'">Login</button>
         </div>
 
         <picture>
@@ -40,5 +40,16 @@
     <section id="about">
         <iframe src="about/about.html" style="width:100%;height:100vh;border:none;display:block;"></iframe>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const authToken = localStorage.getItem('authToken');
+            const loginButtonContainer = document.getElementById('loginButtonContainer');
+            
+            if (authToken) {
+                loginButtonContainer.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>

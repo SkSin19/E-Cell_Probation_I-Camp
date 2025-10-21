@@ -26,7 +26,7 @@ body {
   padding: 20px;
 }
 
-.registration-container {
+.login-container {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -96,25 +96,6 @@ body {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
-select.input-box {
-  cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-position: right 1.5rem center;
-  background-size: 1.5em;
-  padding-right: 3.5rem;
-  background-color: rgba(217, 217, 217, 0.25);
-}
-
-select.input-box option {
-  background: #333;
-  color: #fff;
-  padding: 10px;
-}
-
 .submit {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
@@ -168,7 +149,7 @@ select.input-box option {
     background-attachment: scroll;
   }
 
-  .registration-container {
+  .login-container {
     border-radius: 60px;
     padding: 1.5rem clamp(1.5rem, 4vw, 5rem);
   }
@@ -184,7 +165,7 @@ select.input-box option {
     background-attachment: scroll;
   }
 
-  .registration-container {
+  .login-container {
     border-radius: 30px;
     padding: 1.5rem 1.5rem;
   }
@@ -198,76 +179,20 @@ select.input-box option {
   }
 
   .input-box,
-  select.input-box {
-    border-radius: 15px;
-  }
-
-  .submit {
-    margin-top: 1rem;
-  }
-
   .submit-button {
-    border-radius: 15px;
+    min-height: 45px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .background {
-    padding: 8px;
-  }
-
-  .registration-container {
-    border-radius: 20px;
-    padding: 1.25rem 1rem;
-  }
-
-  .heading {
-    margin-bottom: 1rem;
-  }
-
-  .form-group {
-    margin-bottom: 0.75rem;
-  }
-
-  .form-group label {
-    margin-bottom: 0.5rem;
-  }
-
-  .input-box,
-  select.input-box {
-    border-radius: 12px;
-  }
-
-  .submit {
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .submit-button {
-    border-radius: 12px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .background {
     padding: 5px;
   }
 
-  .registration-container {
-    border-radius: 15px;
-    padding: 1.5rem 0.8rem;
-  }
-}
-
-@media screen and (max-height: 600px) and (orientation: landscape) {
-  .background {
-    min-height: auto;
-    padding: 10px;
-  }
-
-  .registration-container {
-    margin: 10px 0;
-    padding: 1.5rem clamp(1rem, 3vw, 5rem);
+  .login-container {
+    border-radius: 20px;
+    padding: 1.5rem 1rem;
+    width: 95%;
   }
 
   .heading {
@@ -275,49 +200,10 @@ select.input-box option {
   }
 
   .form-group {
-    margin-bottom: 1rem;
-  }
-
-  .form-group label {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
   }
 
   .submit {
     margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-}
-
-@media (hover: none) and (pointer: coarse) {
-  .submit-button {
-    min-height: 50px;
-  }
-
-  .input-box,
-  select.input-box {
-    min-height: 50px;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .input-box,
-  select.input-box,
-  .submit-button {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-  
-  .submit-button:hover {
-    transform: none;
   }
 }
