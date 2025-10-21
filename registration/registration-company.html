@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="registration-company.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="background">
+      <div class="registration-container">
+        <p class="heading">REGISTRATION</p>
+
+        <div class="form-group">
+          <label for="companyName" class="name">Company Name:</label>
+          <input type="text" class="input-box" id="companyName" required />
+        </div>
+
+        <div class="form-group">
+          <label for="contactDetails">Contact Details:</label>
+          <input
+            type="tel"
+            class="input-box"
+            id="contactDetails"
+            placeholder="Enter 10-digit number"
+            maxlength="10"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="emailAddress">Email Address:</label>
+          <input type="email" class="input-box" id="emailAddress" required />
+        </div>
+
+        <div class="submit">
+          <button class="submit-button" onclick="validateForm()">Submit</button>
+        </div>
+      </div>
+    </div>
+    <script src="registration-company.js"></script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  overflow-x: hidden;
+}
+
+.background {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("https://ik.imagekit.io/1bsukh3d7/registration-background.png?updatedAt=1761034033249");
+  background-color: black;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.registration-container {
+  display: flex;
+  width: 1137px;
+  height: 888px;
+  padding: 156px 106px 156px 105px;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 100px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.heading {
+  color: #fff;
+  font-family: "Sansation";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 0rem;
+}
+
+.button-container {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-icon {
+  width: 207px;
+  height: 207px;
+  margin-bottom: 0.5rem;
+}
+
+.selection-button {
+  width: 399px;
+  height: 399px;
+  border-radius: 50px;
+  background: radial-gradient(50% 50% at 50% 50%, #fbad25 0%, #f37327 100%);
+  color: black;
+  font-family: Inter;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.selection-button:hover {
+  background: rgba(217, 217, 217, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-5px);
+}
+
+.selection-button:active {
+  transform: translateY(-2px);
+}
+
+.selection-button.selected {
+  background: radial-gradient(50% 50% at 50% 50%, #fbaa24 0%, #f47527 100%);
+  border-color: #fbaa24;
+}

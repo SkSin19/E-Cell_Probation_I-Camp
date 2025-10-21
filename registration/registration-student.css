@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.background {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("https://ik.imagekit.io/1bsukh3d7/registration-background.png?updatedAt=1761034033249");
+  background-color: black;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  overflow-x: hidden;
+}
+
+.registration-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 1137px;
+  max-width: 95%;
+  height: 1530px;
+  flex-shrink: 0;
+  border-radius: 100px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.heading {
+  color: #fff;
+  font-family: "Sansation";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  margin-top: 7rem;
+}
+
+.name {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-left: 7rem;
+}
+
+.first {
+  color: #fff;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.input-box {
+  margin-top: 1rem;
+  width: 400px;
+  max-width: 90%;
+  height: 80px;
+  border-radius: 25px;
+  border: 0 solid #fff;
+  background: rgba(217, 217, 217, 0.25);
+  margin-bottom: 3rem;
+  color: lightgray;
+  font-size: 30px;
+}
+
+.kiit,
+.emails,
+.phone,
+.type-of-internship {
+  color: #fff;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 7rem;
+}
+
+.radio {
+  display: flex;
+  gap: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  align-items: center;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+#yes,
+#no {
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+}
+
+.option label {
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.email-input-box,
+.phone-input-box,
+.dropdown-menu {
+  margin-top: 1rem;
+  width: 910px;
+  max-width: 85%;
+  height: 80px;
+  border-radius: 25px;
+  border: 0 solid #fff;
+  background: rgba(217, 217, 217, 0.25);
+  margin-bottom: 4rem;
+  color: lightgray;
+  font-size: 30px;
+}
+
+.email-input-box:disabled {
+  background: rgba(217, 217, 217, 0.1);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.dropdown-menu {
+  cursor: pointer;
+}
+
+.phone-input-box::placeholder,
+.email-input-box::placeholder,
+.input-box::placeholder {
+  color: lightgray;
+}
+
+.submit-button {
+  width: 400px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 25px;
+  border: 0 solid rgba(255, 255, 255, 0.32);
+  background: radial-gradient(50% 50% at 50% 50%, #fbaa24 0%, #f47527 100%);
+  backdrop-filter: blur(2px);
+  color: #fff;
+  font-family: Inter;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.submit-button:hover {
+  transform: scale(1.05);
+}
+
+.submit-button:active {
+  transform: scale(0.98);
+}
+
+.submit {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
