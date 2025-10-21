@@ -3,13 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be Yourself</title>
+    <title>I-CAMP: Igniting Ideas, Building Futures</title>
     <link rel="stylesheet" href="hero/hero.css">
+    <link rel="stylesheet" href="navbar/navbar.css">
+    
 </head>
 <body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="#"><img
+                    src="https://ik.imagekit.io/oi8av1p5e/d92a158af390825f1841a73595e212740e04e9c1.png?updatedAt=1761031594799"
+                    alt="I-CAMP Logo"></a>
+        </div>
+            <ul class="nav-links">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">HIGHLIGHTS</a></li>
+                <li class="logo">
+                    <a href="#"><img src="https://ik.imagekit.io/oi8av1p5e/d92a158af390825f1841a73595e212740e04e9c1.png?updatedAt=1761031594799" alt="I-CAMP Logo"></a>
+                </li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+        
+    </nav>
+    <section class="hero" aria-label="Be Yourself Hero">
     <section class="hero" aria-label="I-Camp">
         <h1 class="title">
-            <span>Be Yourself</span>
+            <span >I-CAMP:</span> Igniting Ideas,<br>Building Futures
         </h1>
 
         <div class="button-container" id="loginButtonContainer">
@@ -22,16 +44,16 @@
         </picture>
 
         <picture>
-            <source media="(max-width: 768px)" srcset="assets/images/mobileFog1.png">
-            <img src="assets/images/fog1.png" alt="Fog layer 1" class="fog fog--1" />
+            <source media="(max-width: 768px)" srcset="https://ik.imagekit.io/oi8av1p5e/Group%2027.png?updatedAt=1761079839858" >
+            <img src="https://ik.imagekit.io/oi8av1p5e/Rectangle%207.png?updatedAt=1761032626060" alt="Fog layer 1" class="fog fog--1" />
         </picture>
         <picture>
-            <source media="(max-width: 768px)" srcset="assets/images/mobileFog2.png">
-            <img src="assets/images/fog2.png" alt="Fog layer 2" class="fog fog--2" />
+            <source media="(max-width: 768px)" srcset="https://ik.imagekit.io/oi8av1p5e/Group%2028.png?updatedAt=1761079839782">
+            <img src="https://ik.imagekit.io/oi8av1p5e/Rectangle%208.png?updatedAt=1761032703276" alt="Fog layer 2" class="fog fog--2" />
         </picture>
         <picture>
-            <source media="(max-width: 768px)" srcset="assets/images/mobileFog3.png">
-            <img src="assets/images/fog3.png" alt="Fog layer 3" class="fog fog--3" />
+            <source media="(max-width: 768px)" srcset="https://ik.imagekit.io/oi8av1p5e/Group%2021.png?updatedAt=1761079839861">
+            <img src="https://ik.imagekit.io/oi8av1p5e/Rectangle%209.png?updatedAt=1761032702825" alt="Fog layer 3" class="fog fog--3" />
         </picture>
         <div class="hero-gradient"></div>
         <div class="hero-gradient"></div>
@@ -51,5 +73,12 @@
             }
         });
     </script>
+    
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('open');
+        }
+    </script>
+    
 </body>
 </html>
