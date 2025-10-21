@@ -5,10 +5,12 @@ const URI = process.env.MONGO_URL;
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(URI);
+    await mongoose.connect(URI, {
+      serverSelectionTimeoutMS: 5000,
+      socketTimeoutMS: 45000,
+    });
     console.log("MongoDB connected successfully");
     
-    // Optional: Set up connection event listeners
     const db = mongoose.connection;
     db.on("error", console.error.bind(console, "MongoDB connection error:"));
     db.once("open", () => {

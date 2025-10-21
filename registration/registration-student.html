@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="registration-student.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="background">
+      <div class="registration-container student">
+        <p class="heading">REGISTRATION</p>
+        <div class="name">
+          <div class="first">
+            <label for="firstName">First Name:</label>
+            <div class="first-input">
+              <input class="input-box" id="firstName" required />
+            </div>
+          </div>
+          <div class="first">
+            <label for="lastName">Last Name:</label>
+            <div class="last-input">
+              <input class="input-box" id="lastName" required />
+            </div>
+          </div>
+        </div>
+        <div class="kiit">
+          <label>Are you from KIIT?</label>
+          <div class="radio">
+            <div class="option">
+              <input type="radio" name="kiit" value="yes" id="yes" />
+              <label for="yes">Yes</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="kiit" value="no" id="no" />
+              <label for="no">No</label>
+            </div>
+          </div>
+        </div>
+        <div class="emails">
+          <div class="email-kiit">
+            <label for="kiitEmail">Email Address(if from KIIT):</label>
+            <div class="kiit-email">
+              <input type="email" class="email-input-box" id="kiitEmail" />
+            </div>
+          </div>
+          <div class="email-non-kiit">
+            <label for="nonKiitEmail">Email Address (if not from KIIT):</label>
+            <div class="non-kiit-email">
+              <input type="email" class="email-input-box" id="nonKiitEmail" />
+            </div>
+          </div>
+        </div>
+        <div class="phone">
+          <label for="phoneNumber">Phone Number:</label>
+          <div class="phone-input">
+            <input
+              type="tel"
+              class="phone-input-box"
+              id="phoneNumber"
+              placeholder="Enter 10-digit number"
+              maxlength="10"
+            />
+          </div>
+        </div>
+        <div class="type-of-internship">
+          <label for="typeintern">Type of Internship wanted:</label>
+          <div class="dropdown">
+            <select id="typeintern" name="typeintern" class="dropdown-menu">
+              <option value="">Select an option</option>
+              <option value="Technical">Technical</option>
+              <option value="Non-Technical">Non-Technical</option>
+              <option value="Management">Management</option>
+              <option value="Research">Research</option>
+              <option value="Design">Design</option>
+            </select>
+          </div>
+        </div>
+        <div class="phone">
+          <label for="password">Password:</label>
+          <div class="phone-input">
+            <input
+              type="password"
+              class="phone-input-box"
+              id="password"
+              placeholder="Enter password (min 6 characters)"
+              minlength="6"
+            />
+          </div>
+        </div>
+        <div class="submit">
+          <button class="submit-button" onclick="validateForm()">Submit</button>
+        </div>
+      </div>
+      
+    </div>
+    <script src="registration-student.js"></script>
+  </body>
+</html>

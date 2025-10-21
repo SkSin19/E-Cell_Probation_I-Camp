@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="start.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="background">
+      <div class="login-container">
+        <h1 class="heading">LOGIN</h1>
+        <div class="content-wrapper">
+          <div class="button-container">
+            <button
+              class="selection-button"
+              id="studentBtn"
+              onclick="selectStudent()"
+            >
+              <img
+                src="https://ik.imagekit.io/1bsukh3d7/student-icon.png?updatedAt=1761034003875"
+                alt="Student"
+                class="button-icon"
+              />
+              Student
+            </button>
+            <button
+              class="selection-button"
+              id="companyBtn"
+              onclick="selectCompany()"
+            >
+              <img
+                src="https://ik.imagekit.io/1bsukh3d7/company-icon.png?updatedAt=1761034004112"
+                alt="Company"
+                class="button-icon"
+              />
+              Company
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="start.js"></script>
+  </body>
+</html>
