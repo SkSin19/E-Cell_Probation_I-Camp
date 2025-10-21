@@ -1,12 +1,14 @@
-// server.js
-require('dotenv').config();
 const express = require('express');
+require('dotenv').config();
+
 const cors = require('cors');
 const connectDB = require('./config/db');
-const registrationRoute = require('./routes/registrationRoute');
+const studentRoute = require('./routes/studentRoute');
+const companiesRoute = require('./routes/companiesRoutes');
+
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT  ;
 
 // Middlewares
 app.use(cors());
@@ -21,7 +23,9 @@ app.get('/', (req, res) => {
 });
 
 // Main API Route
-app.use('/api/v1/register', registrationRoute);
+app.use('/api/v1/student', studentRoute);
+app.use('/api/v2/companies', companiesRoute);
+
 
 // Start the Server
 app.listen(PORT, () => {
