@@ -16,6 +16,7 @@
   background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
+  padding: 20px;
 }
 
 .body {
@@ -30,11 +31,13 @@
   flex-direction: column;
   width: 1137px;
   max-width: 95%;
-  height: 1530px;
+  height: auto;
+  min-height: 1530px;
   flex-shrink: 0;
   border-radius: 100px;
   border: 1px solid rgba(0, 0, 0, 0);
   background: rgba(255, 255, 255, 0.1);
+  padding-bottom: 3rem;
 }
 
 .heading {
@@ -53,6 +56,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding-left: 7rem;
+  padding-right: 7rem;
+  gap: 2rem;
 }
 
 .first {
@@ -66,15 +71,16 @@
 
 .input-box {
   margin-top: 1rem;
-  width: 400px;
-  max-width: 90%;
+  width: 100%;
+  max-width: 910px;
   height: 80px;
   border-radius: 25px;
   border: 0 solid #fff;
   background: rgba(217, 217, 217, 0.25);
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   color: lightgray;
   font-size: 30px;
+  padding: 0 1rem;
 }
 
 .kiit,
@@ -88,6 +94,7 @@
   font-weight: 400;
   line-height: normal;
   padding-left: 7rem;
+  padding-right: 7rem;
 }
 
 .radio {
@@ -114,14 +121,15 @@
 .option label {
   font-size: 32px;
   cursor: pointer;
+  color: #fff;
 }
 
 .email-input-box,
 .phone-input-box,
 .dropdown-menu {
   margin-top: 1rem;
-  width: 910px;
-  max-width: 85%;
+  width: 100%;
+  max-width: 910px;
   height: 80px;
   border-radius: 25px;
   border: 0 solid #fff;
@@ -129,6 +137,7 @@
   margin-bottom: 4rem;
   color: lightgray;
   font-size: 30px;
+  padding: 0 1rem;
 }
 
 .email-input-box:disabled {
@@ -149,6 +158,7 @@
 
 .submit-button {
   width: 400px;
+  max-width: 90%;
   height: 80px;
   flex-shrink: 0;
   border-radius: 25px;
@@ -178,4 +188,227 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Tablet styles (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .registration-container {
+    border-radius: 60px;
+    min-height: auto;
+  }
+
+  .heading {
+    font-size: 48px;
+    margin-top: 5rem;
+  }
+
+  .name {
+    margin-top: 2.5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    gap: 1.5rem;
+  }
+
+  .first {
+    font-size: 28px;
+  }
+
+  .input-box {
+    height: 70px;
+    font-size: 24px;
+    margin-bottom: 3rem;
+  }
+
+  .kiit,
+  .emails,
+  .phone,
+  .type-of-internship {
+    font-size: 28px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .radio {
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  #yes,
+  #no {
+    width: 30px;
+    height: 30px;
+  }
+
+  .option label {
+    font-size: 28px;
+  }
+
+  .email-input-box,
+  .phone-input-box,
+  .dropdown-menu {
+    height: 70px;
+    font-size: 24px;
+    margin-bottom: 3rem;
+  }
+
+  .submit-button {
+    width: 350px;
+    height: 70px;
+    font-size: 36px;
+  }
+}
+
+/* Mobile styles (max 767px) */
+@media screen and (max-width: 767px) {
+  .background {
+    padding: 15px;
+  }
+
+  .registration-container {
+    border-radius: 40px;
+    min-height: auto;
+    max-width: 100%;
+  }
+
+  .heading {
+    font-size: 36px;
+    margin-top: 3rem;
+  }
+
+  .name {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    gap: 0;
+  }
+
+  .first {
+    font-size: 22px;
+  }
+
+  .input-box {
+    height: 60px;
+    font-size: 18px;
+    margin-bottom: 2rem;
+    max-width: 100%;
+    border-radius: 20px;
+  }
+
+  .kiit,
+  .emails,
+  .phone,
+  .type-of-internship {
+    font-size: 22px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .radio {
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  #yes,
+  #no {
+    width: 25px;
+    height: 25px;
+  }
+
+  .option label {
+    font-size: 22px;
+  }
+
+  .email-input-box,
+  .phone-input-box,
+  .dropdown-menu {
+    height: 60px;
+    font-size: 18px;
+    margin-bottom: 2rem;
+    border-radius: 20px;
+  }
+
+  .submit {
+    margin-bottom: 2rem;
+  }
+
+  .submit-button {
+    width: 280px;
+    height: 60px;
+    font-size: 28px;
+    border-radius: 20px;
+  }
+}
+
+/* Small mobile styles (max 480px) */
+@media screen and (max-width: 480px) {
+  .background {
+    padding: 10px;
+  }
+
+  .registration-container {
+    border-radius: 30px;
+  }
+
+  .heading {
+    font-size: 28px;
+    margin-top: 2rem;
+  }
+
+  .name {
+    margin-top: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .first {
+    font-size: 18px;
+  }
+
+  .input-box {
+    height: 50px;
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+    border-radius: 15px;
+  }
+
+  .kiit,
+  .emails,
+  .phone,
+  .type-of-internship {
+    font-size: 18px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .radio {
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  #yes,
+  #no {
+    width: 22px;
+    height: 22px;
+  }
+
+  .option label {
+    font-size: 18px;
+  }
+
+  .email-input-box,
+  .phone-input-box,
+  .dropdown-menu {
+    height: 50px;
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+    border-radius: 15px;
+  }
+
+  .submit-button {
+    width: 240px;
+    height: 50px;
+    font-size: 24px;
+  }
 }

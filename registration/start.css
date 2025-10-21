@@ -8,6 +8,7 @@ body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
     "Apple Color Emoji", "Segoe UI Emoji";
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .background {
@@ -104,4 +105,139 @@ body {
 .selection-button.selected {
   background: radial-gradient(50% 50% at 50% 50%, #fbaa24 0%, #f47527 100%);
   border-color: #fbaa24;
+}
+
+@media screen and (max-width: 1024px) {
+  .registration-container {
+    border-radius: 60px;
+    padding: 100px 60px;
+    min-height: 700px;
+  }
+
+  .heading {
+    font-size: 48px;
+  }
+
+  .content-wrapper {
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .button-container {
+    gap: 2rem;
+  }
+
+  .button-icon {
+    width: 160px;
+    height: 160px;
+  }
+
+  .selection-button {
+    width: 320px;
+    height: 320px;
+    font-size: 36px;
+    border-radius: 40px;
+  }
+}
+
+/* Mobile styles (max 767px) */
+@media screen and (max-width: 767px) {
+  .background {
+    padding: 15px;
+  }
+
+  .registration-container {
+    border-radius: 40px;
+    padding: 60px 30px;
+    min-height: auto;
+    max-width: 100%;
+  }
+
+  .heading {
+    font-size: 36px;
+  }
+
+  .content-wrapper {
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    flex-direction: column;
+  }
+
+  .button-container {
+    gap: 2rem;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .button-icon {
+    width: 120px;
+    height: 120px;
+  }
+
+  .selection-button {
+    width: 280px;
+    height: 280px;
+    font-size: 32px;
+    border-radius: 35px;
+  }
+}
+
+/* Small mobile styles (max 480px) */
+@media screen and (max-width: 480px) {
+  .background {
+    padding: 10px;
+  }
+
+  .registration-container {
+    border-radius: 30px;
+    padding: 40px 20px;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+
+  .content-wrapper {
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .button-container {
+    gap: 1.5rem;
+  }
+
+  .button-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .selection-button {
+    width: 240px;
+    height: 240px;
+    font-size: 28px;
+    border-radius: 30px;
+  }
+}
+
+/* Extra small mobile styles (max 360px) */
+@media screen and (max-width: 360px) {
+  .registration-container {
+    padding: 30px 15px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .button-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .selection-button {
+    width: 200px;
+    height: 200px;
+    font-size: 24px;
+    border-radius: 25px;
+  }
 }
