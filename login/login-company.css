@@ -30,91 +30,91 @@ body {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  width: 50%;
-  max-width: auto;
-  height: 30%;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
   min-height: auto;
-  border-radius: 100px;
+  flex-shrink: 0;
+  border-radius: 40px;
   border: 1px solid rgba(0, 0, 0, 0);
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  padding: 2rem clamp(1.5rem, 5vw, 7rem);
+  padding: 2rem 2.5rem;
 }
 
 .heading {
   color: #fff;
   font-family: "Sansation", sans-serif;
-  font-size: clamp(28px, 4vw, 52px);
+  font-size: 32px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   text-align: center;
-  margin-bottom: 2rem;
-  padding: 0 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   width: 100%;
 }
 
 .form-group label {
   color: #fff;
   font-family: Inter, sans-serif;
-  font-size: clamp(16px, 2vw, 26px);
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   display: block;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .input-box {
   width: 100%;
   max-width: 100%;
-  height: clamp(45px, 7vw, 70px);
-  border-radius: 25px;
+  height: 45px;
+  border-radius: 15px;
   border: 0 solid #fff;
   background: rgba(217, 217, 217, 0.25);
-  padding: 0 1.5rem;
+  padding: 0 1rem;
   color: #fff;
-  font-size: clamp(14px, 1.8vw, 20px);
+  font-size: 14px;
   transition: all 0.3s ease;
 }
 
 .input-box::placeholder {
   color: rgba(255, 255, 255, 0.6);
   font-family: Inter, sans-serif;
-  font-size: clamp(14px, 1.8vw, 24px);
+  font-size: 14px;
 }
 
 .input-box:focus {
-  outline: 2px solid #f47527;
-  outline-offset: 2px;
+  outline: none;
   background: rgba(217, 217, 217, 0.35);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .submit {
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .submit-button {
-  width: clamp(220px, 35vw, 350px);
-  height: clamp(45px, 7vw, 70px);
+  width: 100%;
+  max-width: 250px;
+  height: 50px;
   flex-shrink: 0;
-  border-radius: 25px;
+  border-radius: 15px;
   border: 0 solid rgba(255, 255, 255, 0.32);
   background: radial-gradient(50% 50% at 50% 50%, #fbaa24 0%, #f47527 100%);
   backdrop-filter: blur(2px);
   color: #fff;
   font-family: Inter, sans-serif;
-  font-size: clamp(22px, 3vw, 36px);
+  font-size: 24px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -143,6 +143,7 @@ body {
   outline-offset: 3px;
 }
 
+/* Tablet styles (768px - 1024px) */
 @media screen and (max-width: 1024px) {
   .background {
     padding: 15px;
@@ -150,15 +151,17 @@ body {
   }
 
   .login-container {
-    border-radius: 60px;
-    padding: 1.5rem clamp(1.5rem, 4vw, 5rem);
+    border-radius: 40px;
+    padding: 2rem 2.5rem;
   }
 
   .heading {
+    font-size: 32px;
     margin-bottom: 1.5rem;
   }
 }
 
+/* Mobile styles (max 767px) */
 @media screen and (max-width: 767px) {
   .background {
     padding: 10px;
@@ -168,34 +171,11 @@ body {
   .login-container {
     border-radius: 30px;
     padding: 1.5rem 1.5rem;
+    max-width: 100%;
   }
 
   .heading {
-    margin-bottom: 1.25rem;
-  }
-
-  .form-group {
-    margin-bottom: 1rem;
-  }
-
-  .input-box,
-  .submit-button {
-    min-height: 45px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .background {
-    padding: 5px;
-  }
-
-  .login-container {
-    border-radius: 20px;
-    padding: 1.5rem 1rem;
-    width: 95%;
-  }
-
-  .heading {
+    font-size: clamp(24px, 6vw, 32px);
     margin-bottom: 1rem;
   }
 
@@ -203,7 +183,94 @@ body {
     margin-bottom: 0.75rem;
   }
 
+  .form-group label {
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+  }
+
+  .input-box {
+    height: 40px;
+    border-radius: 12px;
+    font-size: 13px;
+  }
+
+  .input-box::placeholder {
+    font-size: 13px;
+  }
+
   .submit {
-    margin-top: 1rem;
+    margin-top: 0.75rem;
+  }
+
+  .submit-button {
+    height: 45px;
+    border-radius: 12px;
+    font-size: 20px;
+  }
+}
+
+/* Small mobile styles (max 480px) */
+@media screen and (max-width: 480px) {
+  .background {
+    padding: 8px;
+  }
+
+  .login-container {
+    border-radius: 20px;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .heading {
+    font-size: clamp(22px, 6vw, 28px);
+  }
+
+  .form-group {
+    margin-bottom: 0.5rem;
+  }
+
+  .submit {
+    margin-top: 0.5rem;
+  }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 360px) {
+  .background {
+    padding: 5px;
+  }
+
+  .login-container {
+    border-radius: 15px;
+    padding: 1.25rem 1rem;
+  }
+}
+
+/* Landscape orientation fix for mobile devices */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  .background {
+    min-height: auto;
+    padding: 10px;
+  }
+
+  .login-container {
+    margin: 10px 0;
+    padding: 1.5rem 2rem;
+  }
+
+  .heading {
+    font-size: 28px;
+    margin-bottom: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 0.75rem;
+  }
+
+  .input-box {
+    height: 40px;
+  }
+
+  .submit {
+    margin-top: 0.75rem;
   }
 }

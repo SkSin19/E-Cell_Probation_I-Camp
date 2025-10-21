@@ -43,6 +43,14 @@ const registerCompany = async (req, res) => {
         data: company.toJSON(),
       });
   } catch (error) {
+    if (error.code === 11000) {
+      const field = Object.keys(error.keyPattern)[0];
+      if (field === 'email') {
+        return res.status(400).json({ success: false, message: "Email already registered." });
+      } else if (field === 'phone') {
+        return res.status(400).json({ success: false, message: "Phone already registered." });
+      }
+    }
     res.status(500).json({ success: false, message: "Error registering company.", error: error.message });
   }
 };
