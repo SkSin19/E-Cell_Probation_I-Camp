@@ -31,4 +31,11 @@ companySchema.methods.comparePassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
+// Exclude password from JSON responses
+companySchema.methods.toJSON = function () {
+  const obj = this.toObject();
+  delete obj.password;
+  return obj;
+};
+
 module.exports = mongoose.model("Company", companySchema);

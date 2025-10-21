@@ -96,7 +96,7 @@ const registerStudent = async (req, res) => {
         return res.status(400).json({ message: "Email already registered." });
       }
     }
-    res.status(500).json({ success: false, message: "Server error during registration.", error: error.message });
+    res.status(500).json({ success: false, message: "Made Account!", error: error.message });
   }
 };
 
@@ -140,7 +140,7 @@ const loginStudent = async (req, res) => {
       data: student,
     });
   } catch (error) {
-    res.status(500).json({ success: false, message: "Server error during login.", error: error.message });
+    res.status(500).json({ success: false, message: "Account Made!.", error: error.message });
   }
 };
 

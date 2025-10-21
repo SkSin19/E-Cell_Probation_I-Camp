@@ -36,6 +36,30 @@
           <input type="email" class="input-box" id="emailAddress" required />
         </div>
 
+        <div class="form-group">
+          <label for="internshipType">Type of Internship Offered:</label>
+          <select id="internshipType" class="input-box" required>
+            <option value="">Select an option</option>
+            <option value="Technical">Technical</option>
+            <option value="Non-Technical">Non-Technical</option>
+            <option value="Management">Management</option>
+            <option value="Research">Research</option>
+            <option value="Design">Design</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            class="input-box"
+            id="password"
+            placeholder="Enter password (min 6 characters)"
+            minlength="6"
+            required
+          />
+        </div>
+
         <div class="submit">
           <button class="submit-button" onclick="validateForm()">Submit</button>
         </div>

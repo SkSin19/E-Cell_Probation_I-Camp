@@ -31,5 +31,12 @@ studentSchema.methods.comparePassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
+// Exclude password from JSON responses
+studentSchema.methods.toJSON = function () {
+  const obj = this.toObject();
+  delete obj.password;
+  return obj;
+};
+
 const Student = mongoose.model("Student", studentSchema);
 module.exports = Student;
