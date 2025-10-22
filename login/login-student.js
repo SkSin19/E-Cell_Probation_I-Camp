@@ -11,7 +11,7 @@ async function validateForm() {
   const password = document.getElementById("password").value;
 
   if (!emailOrPhone) {
-    alert("Please enter email or phone number");
+    toast.error("Please enter email or phone number");
     return false;
   }
 
@@ -19,12 +19,12 @@ async function validateForm() {
   const phoneRegex = /^[6-9]\d{9}$/;
 
   if (!emailRegex.test(emailOrPhone) && !phoneRegex.test(emailOrPhone)) {
-    alert("Please enter a valid email or 10-digit phone number");
+    toast.error("Please enter a valid email or 10-digit phone number");
     return false;
   }
 
   if (!password) {
-    alert("Please enter password");
+    toast.error("Please enter password");
     return false;
   }
 
@@ -49,7 +49,7 @@ async function validateForm() {
     const result = await response.json();
 
     if (response.ok && result.success) {
-      alert(result.message || "Login successful!");
+      toast.success(result.message || "Login successful!");
       
       if (result.token) {
         localStorage.setItem('authToken', result.token);
@@ -57,16 +57,18 @@ async function validateForm() {
         localStorage.setItem('userData', JSON.stringify(result.data));
       }
       
-      sessionStorage.removeItem('loginType');
-      window.location.href = '../index.html';
+      setTimeout(() => {
+        sessionStorage.removeItem('loginType');
+        window.location.href = '../index.html';
+      }, 1500);
     } else {
-      alert(result.message || "Login failed. Please try again.");
+      toast.error(result.message || "Login failed. Please try again.");
       submitBtn.disabled = false;
       submitBtn.textContent = 'Login';
     }
   } catch (error) {
     console.error('Error:', error);
-    alert("An error occurred. Please make sure the server is running and try again.");
+    toast.error("An error occurred. Please make sure the server is running and try again.");
     const submitBtn = document.querySelector('.submit-button');
     submitBtn.disabled = false;
     submitBtn.textContent = 'Login';

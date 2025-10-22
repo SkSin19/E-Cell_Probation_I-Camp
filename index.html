@@ -7,7 +7,6 @@
     <link rel="icon" type="image/png" href="https://ik.imagekit.io/ilgcom35w/kiitecelllogo-removebg-preview.png?updatedAt=1761159944097">
     <link rel="stylesheet" href="hero/hero.css">
     <link rel="stylesheet" href="navbar/navbar.css">
-    
 </head>
 <body>
     <nav class="navbar">
@@ -28,6 +27,13 @@
                 <li class="nav-spacer"></li>
                 <li><a href="./login/start.html" class="nav-button login-button">LOGIN</a></li>
                 <li><a href="./registration/start.html" class="nav-button register-button">REGISTER</a></li>
+                <li class="user-profile">
+                    <button class="user-profile-btn" title="Profile">👤</button>
+                    <div class="user-dropdown">
+                        <div class="user-dropdown-item" id="user-name">Profile</div>
+                        <a href="#" class="user-dropdown-item logout-btn">🚪 Logout</a>
+                    </div>
+                </li>
             </ul>
             <div class="menu-icon" onclick="toggleMenu()">☰</div>
     </nav>
@@ -95,5 +101,6 @@
   });
     
     </script>
+    <script src="navbar/navbar.js"></script>
 </body>
 </html>

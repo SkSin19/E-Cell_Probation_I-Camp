@@ -1,0 +1,113 @@
+/* Toast Container */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Toast Notification */
+.toast {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: slideIn 0.3s ease-out;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+/* Success Toast */
+.toast.success {
+    background-color: #4caf50;
+    color: #fff;
+    border-left: 4px solid #388e3c;
+}
+
+/* Error Toast */
+.toast.error {
+    background-color: #f44336;
+    color: #fff;
+    border-left: 4px solid #d32f2f;
+}
+
+/* Toast Icon */
+.toast-icon {
+    font-size: 20px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* Toast Message */
+.toast-message {
+    font-size: 14px;
+    font-weight: 500;
+    flex: 1;
+}
+
+/* Toast Close Button */
+.toast-close {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.toast-close:hover {
+    opacity: 1;
+}
+
+/* Animation - Slide In */
+@keyframes slideIn {
+    from {
+        transform: translateX(-400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animation - Slide Out */
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-400px);
+        opacity: 0;
+    }
+}
+
+/* Toast Remove Animation */
+.toast.removing {
+    animation: slideOut 0.3s ease-out forwards;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .toast-container {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+    }
+
+    .toast {
+        min-width: auto;
+        max-width: 100%;
+    }
+}

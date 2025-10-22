@@ -42,43 +42,43 @@ async function validateForm() {
   const isNotKiit = document.getElementById("no").checked;
 
   if (!firstName || !lastName) {
-    alert("Please enter both first and last name");
+    toast.error("Please enter both first and last name");
     return false;
   }
 
   if (!isKiit && !isNotKiit) {
-    alert("Please select whether you are from KIIT or not");
+    toast.error("Please select whether you are from KIIT or not");
     return false;
   }
 
   if (isKiit && !kiitEmailValue) {
-    alert("Please enter your KIIT email address");
+    toast.error("Please enter your KIIT email address");
     return false;
   }
 
   if (isNotKiit && !nonKiitEmailValue) {
-    alert("Please enter your email address");
+    toast.error("Please enter your email address");
     return false;
   }
 
   if (!phoneNumber) {
-    alert("Please enter a phone number");
+    toast.error("Please enter a phone number");
     return false;
   }
 
   const phoneRegex = /^[6-9]\d{9}$/;
   if (!phoneRegex.test(phoneNumber)) {
-    alert("Please enter a valid 10-digit Indian mobile number (starting with 6, 7, 8, or 9)");
+    toast.error("Please enter a valid 10-digit Indian mobile number (starting with 6, 7, 8, or 9)");
     return false;
   }
 
   if (!internshipType) {
-    alert("Please select an internship type");
+    toast.error("Please select an internship type");
     return false;
   }
 
   if (!password || password.length < 6) {
-    alert("Please enter a password with at least 6 characters");
+    toast.error("Please enter a password with at least 6 characters");
     return false;
   }
 
@@ -109,17 +109,19 @@ async function validateForm() {
     const result = await response.json();
 
     if (response.ok && result.success) {
-      alert(result.message || "Registration successful! Welcome aboard!");
-      sessionStorage.removeItem('registrationType');
-      window.location.href = '../index.html';
+      toast.success(result.message || "Registration successful! Welcome aboard!");
+      setTimeout(() => {
+        sessionStorage.removeItem('registrationType');
+        window.location.href = '../index.html';
+      }, 1500);
     } else {
-      alert(result.message || "Registration failed. Please try again.");
+      toast.error(result.message || "Registration failed. Please try again.");
       submitBtn.disabled = false;
       submitBtn.textContent = 'Submit';
     }
   } catch (error) {
     console.error('Error:', error);
-    alert("An error occurred. Please make sure the server is running and try again.");
+    toast.error("An error occurred. Please make sure the server is running and try again.");
     const submitBtn = document.querySelector('.submit-button');
     submitBtn.disabled = false;
     submitBtn.textContent = 'Submit';
