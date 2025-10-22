@@ -63,7 +63,7 @@ async function validateForm() {
     submitBtn.disabled = true;
     submitBtn.textContent = 'Submitting...';
 
-    const response = await fetch('http://localhost:8000/api/v2/companies/register', {
+    const response = await fetch('https://e-cell-probation-i-camp.onrender.com/api/v2/companies/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
