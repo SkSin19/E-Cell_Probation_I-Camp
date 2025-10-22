@@ -9,7 +9,7 @@
 html{
 	box-sizing: border-box;
 	height: 100%;
-    overflow-x: hidden;
+    
 }
 
 body{
@@ -65,9 +65,9 @@ body{
 
 @media (hover: hover) and (pointer: fine) {
 	.card:hover{
-		background: var(--featured);
 		box-shadow: 0 18px 40px rgba(0,0,0,.35);
 		transform: scale(1.05);
+        background-color: var(--featured);
 	}
 }
 
@@ -91,6 +91,7 @@ body{
 .card:hover .icon img,
 .card.active .icon img{
 	transform: scale(1.1);
+    
 }
 
 .card h3{
@@ -126,17 +127,8 @@ body{
 	.card{
 		max-width: 280px;
 	}
-	
-	.card:hover{
-		max-width: 320px;
-	}
 }
 
 @media (min-width: 901px){
 	.grid{ align-items: start; }
-
-	.card:hover{
-		aspect-ratio: auto;
-		min-height: 420px;
-	}
 }
