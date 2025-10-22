@@ -54,7 +54,7 @@ body{
 	box-shadow: 0 10px 30px rgba(0,0,0,.25);
 }
 
-.card--featured{
+.featured{
 	background: var(--featured);
 	box-shadow: 0 18px 40px rgba(0,0,0,.35);
 }
@@ -96,7 +96,7 @@ body{
 @media (min-width: 901px){
 	.grid{ align-items: start; }
 
-	.card--featured{
+	.featured{
 		aspect-ratio: auto;
 		min-height: 420px; 
 	}
