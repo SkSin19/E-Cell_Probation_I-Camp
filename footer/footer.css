@@ -1,13 +1,11 @@
-body {
+html, body {
+    height: auto;
     margin: 0;
     padding: 0;
     background: #000000;
 }
 .mkc{
-    position: absolute;
-    bottom: 0;
     width: 100%;
-    
 }
 .footer-main {
     background: #f6ad32;
@@ -16,7 +14,7 @@ body {
     position: relative;
     min-width: 600px;
     font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 32px;
+    margin: 0;
 }
 
 .footer-content {
@@ -125,7 +123,7 @@ body {
 @media (max-width: 900px) {
     .footer-main {
         min-width: 0;
-        margin: 16px;
+        margin: 0;
         border-radius: 18px;
         padding: 18px 10px 10px 10px;
     }
@@ -231,7 +229,7 @@ body {
 
 @media (max-width: 600px) {
     .footer-main {
-        margin: 8px;
+        margin: 0;
         padding: 30px 4px 8px 4px;
         border-radius: 12px;
     }

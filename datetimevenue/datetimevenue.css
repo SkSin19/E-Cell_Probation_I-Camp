@@ -3,7 +3,7 @@ body, html {
     padding: 0;
     height: 100vh;
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: #000; /* fallback background */
+    background: #000; 
 }
 
 .background {
@@ -77,7 +77,6 @@ body, html {
     display: block;
 }
 
-/* Rocket graphic */
 .rocket-graphic {
     width: 250px;
     height: 265px;
@@ -94,7 +93,6 @@ body, html {
     margin-bottom: 160px;
 }
 
-/* Details - right side */
 .dtv-details {
     display: flex;
     flex-direction: column;
