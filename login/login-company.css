@@ -8,6 +8,7 @@ body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
     "Apple Color Emoji", "Segoe UI Emoji";
   overflow-x: hidden;
+  padding-top: 0 !important;
 }
 
 .background {
@@ -24,6 +25,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 20px;
+      padding-top: 140px;
+
 }
 
 .login-container {
@@ -147,6 +150,8 @@ body {
 @media screen and (max-width: 1024px) {
   .background {
     padding: 15px;
+        padding-top: 140px;
+
     background-attachment: scroll;
   }
 
@@ -165,6 +170,8 @@ body {
 @media screen and (max-width: 767px) {
   .background {
     padding: 10px;
+        padding-top: 110px;
+
     background-attachment: scroll;
   }
 
@@ -213,6 +220,8 @@ body {
 @media screen and (max-width: 480px) {
   .background {
     padding: 8px;
+        padding-top: 100px;
+
   }
 
   .login-container {
@@ -237,40 +246,12 @@ body {
 @media screen and (max-width: 360px) {
   .background {
     padding: 5px;
+        padding-top: 95px;
+
   }
 
   .login-container {
     border-radius: 15px;
     padding: 1.25rem 1rem;
-  }
-}
-
-/* Landscape orientation fix for mobile devices */
-@media screen and (max-height: 600px) and (orientation: landscape) {
-  .background {
-    min-height: auto;
-    padding: 10px;
-  }
-
-  .login-container {
-    margin: 10px 0;
-    padding: 1.5rem 2rem;
-  }
-
-  .heading {
-    font-size: 28px;
-    margin-bottom: 1rem;
-  }
-
-  .form-group {
-    margin-bottom: 0.75rem;
-  }
-
-  .input-box {
-    height: 40px;
-  }
-
-  .submit {
-    margin-top: 0.75rem;
   }
 }
