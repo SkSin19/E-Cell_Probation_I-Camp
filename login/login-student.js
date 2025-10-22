@@ -38,7 +38,7 @@ async function validateForm() {
     submitBtn.disabled = true;
     submitBtn.textContent = 'Logging in...';
 
-    const response = await fetch('http://localhost:8000/api/v1/student/login', {
+    const response = await fetch('https://icamp-test.onrender.com/api/v1/student/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
