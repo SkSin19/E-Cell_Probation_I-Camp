@@ -92,3 +92,7 @@ async function validateForm() {
 
   return false;
 }
+
+function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('open');
+        }

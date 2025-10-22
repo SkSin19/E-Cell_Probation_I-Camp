@@ -1,0 +1,134 @@
+:root{
+	--bg: #000000;
+	--card: #e6e6e6;
+	--featured: #f5a524;
+	--text-dark: #111318;
+	--muted: #303237;
+}
+
+html{
+	box-sizing: border-box;
+	height: 100%;
+    
+}
+
+body{
+	box-sizing: border-box;
+	height: 100%;
+	margin: 0;
+	background: var(--bg);
+	color: #fff;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 72px 24px 96px;
+}
+
+.title{
+	text-align:center;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	font-size: clamp(28px, 4vw, 44px);
+	margin: 0 0 40px;
+    color: #f5a524;
+}
+
+.grid{
+	display:grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 28px;
+	align-items: stretch;
+	justify-items: center;
+}
+
+.card{
+	width:100%;
+	max-width: 340px;
+	aspect-ratio: 1 / 1;
+	background: var(--card);
+	color: var(--text-dark);
+	border-radius: 28px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	text-align:center;
+	padding: 24px;
+	box-shadow: 0 10px 30px rgba(0,0,0,.25);
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	cursor: pointer;
+	position: relative;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.card:hover{
+		box-shadow: 0 18px 40px rgba(0,0,0,.35);
+		transform: scale(1.05);
+        background-color: var(--featured);
+	}
+}
+
+@media (hover: none) and (pointer: coarse) {
+	.card.active{
+		background: var(--featured);
+		box-shadow: 0 18px 40px rgba(0,0,0,.35);
+		transform: scale(1.02);
+	}
+}
+
+.card .icon img{
+	width: 68px;
+	height: 68px;
+	display:block;
+	margin-bottom: 12px;
+	object-fit: contain;
+	transition: transform 0.3s ease;
+}
+
+.card:hover .icon img,
+.card.active .icon img{
+	transform: scale(1.1);
+    
+}
+
+.card h3{
+	font-size: 22px;
+	line-height: 1.2;
+	margin: 10px 0 10px;
+	font-weight:800;
+}
+
+.card p{
+	font-size: 13px;
+	line-height: 1.4;
+	margin: 0;
+	color: var(--muted);
+	max-width: 260px;
+}
+
+@media (max-width: 900px){
+	.grid{
+		grid-template-columns: 1fr;
+		gap: 22px;
+		max-width: 520px;
+		margin: 0 auto;
+	}
+	.card{
+		width: 100%;
+		max-width: 100%;
+		aspect-ratio: auto;
+		padding: 32px 24px;
+	}
+}
+@media (min-width: 901px) and (max-width: 1100px){
+	.card{
+		max-width: 280px;
+	}
+}
+
+@media (min-width: 901px){
+	.grid{ align-items: start; }
+}

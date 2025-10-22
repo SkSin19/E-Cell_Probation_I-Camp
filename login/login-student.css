@@ -8,6 +8,7 @@ body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
     "Apple Color Emoji", "Segoe UI Emoji";
   overflow-x: hidden;
+  padding-top: 0 !important;
 }
 
 .background {
@@ -24,6 +25,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 20px;
+  padding-top: 140px;
 }
 
 .login-container {
@@ -145,6 +147,8 @@ outline: none;
   .background {
     padding: 15px;
     background-attachment: scroll;
+        padding-top: 140px;
+
   }
 
   .login-container {
@@ -162,6 +166,8 @@ outline: none;
 @media screen and (max-width: 767px) {
   .background {
     padding: 10px;
+        padding-top: 110px;
+
     background-attachment: scroll;
   }
 
@@ -207,6 +213,8 @@ outline: none;
 @media screen and (max-width: 480px) {
   .background {
     padding: 8px;
+        padding-top: 100px;
+
   }
 
   .login-container {
@@ -227,6 +235,8 @@ outline: none;
 @media screen and (max-width: 360px) {
   .background {
     padding: 5px;
+        padding-top: 95px;
+
   }
 
   .login-container {

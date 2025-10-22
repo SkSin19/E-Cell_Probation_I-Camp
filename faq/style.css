@@ -1,0 +1,14 @@
+body{
+  background-color:yellow
+  padding: 40px
+  front-family: Arial,Helvetica,sans-serif;
+  line-height: 1.5rem;
+}
+.accordian{
+  background-color: lightyellow;
+   padding: 4px 16px;
+   margin-bottom: 16px;
+   border-radius: 4px;
+   box-shadow: 1px 1px 5px lightyellow;
+}
+

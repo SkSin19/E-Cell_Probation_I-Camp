@@ -1,0 +1,362 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - I-CAMP</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+    }
+    ::-webkit-scrollbar {
+    display: none;
+}
+
+    body {
+      background-color: #000000;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 100vh;
+      padding: 80px 0 80px 100px;
+      max-width: 100%;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .about-content {
+      flex: 1;
+      max-width: 500px;
+      z-index: 2;
+      padding-right: 50px;
+    }
+
+    .aboutus-text {
+      font-size: 90px;
+      font-weight: bold;
+      color: #fbaa24;
+      line-height: 1;
+      margin-bottom: 40px;
+    }
+
+    .info-text {
+      color: #ffffff;
+      font-size: 20px;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    .about-illustration {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .ellipse-img {
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      z-index: 1;
+      right: 200px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .rectangle-img2 {
+      position: absolute;
+      width: 460px;
+      height: 100vh; /* fill viewport height on large screens */
+      object-fit: cover;
+      z-index: 2;
+      right: 0;
+      top: 0;            /* anchor to the top */
+      bottom: 0;         /* allow it to touch the bottom */
+      transform: none;   /* no vertical centering */
+    }
+
+    .man-img {
+      position: absolute;
+      width: 350px;
+      height: auto;
+      z-index: 3;
+      right: 60px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 1200px) {
+      .about-container {
+        padding: 60px 0 60px 50px;
+      }
+
+      .aboutus-text {
+        font-size: 70px;
+      }
+
+      .info-text {
+        font-size: 18px;
+      }
+
+      .about-illustration {
+        width: 45%;
+      }
+
+      .ellipse-img {
+        width: 350px;
+        height: 350px;
+        right: 160px;
+      }
+
+      .rectangle-img2 {
+        width: 380px;
+        max-height: 600px;
+      }
+
+      .man-img {
+        width: 280px;
+        right: 50px;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .about-container {
+        padding: 50px 0 50px 30px;
+      }
+
+      .aboutus-text {
+        font-size: 60px;
+      }
+
+      .info-text {
+        font-size: 16px;
+      }
+
+      .about-content {
+        max-width: 400px;
+      }
+
+      .about-illustration {
+        width: 50%;
+      }
+
+      .ellipse-img {
+        width: 300px;
+        height: 300px;
+        right: 130px;
+      }
+
+      .rectangle-img2 {
+        width: 320px;
+        max-height: 500px;
+      }
+
+      .man-img {
+        width: 240px;
+        right: 40px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        padding: 40px 30px;
+        text-align: center;
+        position: relative;
+      }
+
+      .about-content {
+        max-width: 100%;
+        margin-bottom: 50px;
+        padding-right: 0;
+        z-index: 10;
+      }
+
+      .aboutus-text {
+        font-size: 50px;
+        margin-bottom: 30px;
+      }
+
+      .info-text {
+        font-size: 16px;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .about-illustration {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .ellipse-img {
+        width: 320px;
+        height: 320px;
+        left: 50%;
+        right: auto;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .rectangle-img2 {
+        display: none;
+      }
+
+      .man-img {
+        width: 240px;
+        left: 50%;
+        right: auto;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .aboutus-text {
+        font-size: 40px;
+      }
+
+      .info-text {
+        font-size: 14px;
+      }
+
+      .about-illustration {
+        height: 340px;
+      }
+
+      .ellipse-img {
+        width: 320px;
+        height: 320px;
+      }
+
+      .man-img {
+        width: 260px;
+      }
+    }
+
+    .navbar {
+      background-color: #111;
+      padding: 10px 0;
+      position: relative;
+      z-index: 1000;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      margin: 0 15px;
+    }
+
+    .nav-links a {
+      color: #fbaa24;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .logo img {
+      width: 120px;
+      height: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        padding: 10px 0;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+    }
+    /* Desktop override: full-height rectangle */
+    @media screen and (min-width: 901px) {
+      .rectangle-img2 {
+        height: 100vh;
+        max-height: none;
+        top: 0;
+        bottom: 0;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">HIGHLIGHTS</a></li>
+            <li class="logo">
+                <a href="#"><img src="https://ik.imagekit.io/oi8av1p5e/d92a158af390825f1841a73595e212740e04e9c1.png?updatedAt=1761031594799" alt="I-CAMP Logo"></a>
+            </li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">CONTACT US</a></li>
+        </ul>
+    </nav>
+  <section class="about-container">
+    <div class="about-content">
+      <h1 class="aboutus-text">About Us</h1>
+      <p class="info-text">
+        Join I-CAMP — a 6-day innovation bootcamp connecting students with
+        mentors, startups, and internship opportunities. Learn to transform your
+        ideas into real projects while building valuable skills.
+      </p>
+    </div>
+
+    <div class="about-illustration">
+      <img
+        src="https://ik.imagekit.io/Sameekshya/Ellipse%2016.png"
+        alt="Orange Circle Background"
+        class="ellipse-img"
+      />
+      <img
+        src="https://ik.imagekit.io/Sameekshya/Rectangle%2013.png"
+        alt="Orange Rectangle Background"
+        class="rectangle-img2"
+      />
+      <img
+        src="https://ik.imagekit.io/Sameekshya/Untitled-1%201.png?updatedAt=1761042978148"
+        alt="Business Person Climbing Ladder"
+        class="man-img"
+      />
+    </div>
+  </section>
+  <script>
+    // If this page is embedded (e.g., inside the home page iframe), hide its own navbar
+    if (window.self !== window.top) {
+      const localNav = document.querySelector('.navbar');
+      if (localNav) localNav.remove();
+      // Ensure no extra top spacing is applied when embedded
+      document.body.style.paddingTop = '0px';
+    }
+  </script>
+</body>
