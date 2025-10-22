@@ -55,7 +55,7 @@ const registerCompany = async (req, res) => {
   }
 };
 
-// Company Login - Updated to accept emailOrPhone
+// Company Login through emailOrPhone
 const loginCompany = async (req, res) => {
   try {
     const { emailOrPhone, password } = req.body;
