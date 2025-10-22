@@ -3,16 +3,7 @@
 	font-family: 'Coolvetica';
 	src: url('../fonts/Coolvetica\ Rg.otf')
 }
-.hero-gradient {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100vw;
-	height: 3vh;
-	pointer-events: none;
-	z-index: 10;
-	background: linear-gradient(to top, #111 0%, rgba(17,17,17,0.35) 50%, rgba(17,17,17,0.0) 100%);
-}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -92,7 +83,7 @@ body {
 	height: auto;
 	left: 50%;
 	top: auto;
-	bottom: +16vh;
+	bottom: 1vh;
 	transform: translate(-50%, 100vh);
 	opacity: 0;
 	filter: none;
@@ -190,7 +181,7 @@ body {
 	bottom: 5vh;
 	left: 50%;
 	transform: translateX(-50%);
-	z-index: 11;
+	z-index: 110;
 	opacity: 0;
 	animation: buttonFadeIn 800ms ease-out forwards;
 	animation-delay: 1800ms;
