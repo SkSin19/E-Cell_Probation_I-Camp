@@ -11,6 +11,9 @@ html{
 	height: 100%;
     
 }
+::-webkit-scrollbar {
+    display: none;
+}
 
 body{
 	box-sizing: border-box;

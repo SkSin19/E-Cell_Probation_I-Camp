@@ -9,6 +9,9 @@ body {
   background-color: #000;
   padding: 40px 20px;
 }
+::-webkit-scrollbar {
+    display: none;
+}
 
 .faq-container {
   display: flex;
