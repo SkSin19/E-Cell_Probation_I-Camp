@@ -39,3 +39,8 @@ window.onload = function() {
                 window.location.href = 'registration-company.html';
             }, 300);
         }
+        
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('open');
+        }
+    

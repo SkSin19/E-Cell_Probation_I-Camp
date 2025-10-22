@@ -39,3 +39,7 @@ function selectCompany() {
     window.location.href = 'login-company.html';
   }, 300);
 }
+
+function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('open');
+        }
