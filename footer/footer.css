@@ -3,9 +3,13 @@ html, body {
     margin: 0;
     padding: 0;
     background: #000000;
+    overflow-y: hidden;
 }
+::-webkit-scrollbar {
+    display: none;}
 .mkc{
     width: 100%;
+    padding-top: 3rem;
 }
 .footer-main {
     background: #f6ad32;

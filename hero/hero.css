@@ -187,9 +187,11 @@ body {
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 110;
-	opacity: 0;
+	display: flex;
+	gap: 2rem;
+	opacity: 1;
 	animation: buttonFadeIn 800ms ease-out forwards;
-	animation-delay: 1800ms;
+	animation-delay: 0.5s;
 }
 
 .hero-button {
@@ -198,7 +200,7 @@ body {
 	font-weight: 600;
 	color: #fff;
 	background: radial-gradient(50% 50% at 50% 50%, #fbaa24 0%, #f47527 100%);
-	border: none;
+	border: 2px solid #f47527;
 	border-radius: 50px;
 	cursor: pointer;
 	transition: all 0.3s ease;
@@ -211,6 +213,9 @@ body {
 .hero-button:hover {
 	transform: scale(1.08);
 	box-shadow: 0 6px 30px rgba(244, 117, 39, 0.6);
+	background: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .hero-button:active {
