@@ -42,7 +42,7 @@ const registerStudent = async (req, res) => {
         return res.status(400).json({ message: "Invalid email format." });
     }
 
-    // FIXED: Better duplicate checking logic
+    //checking logic
     const existingQueries = [{ phone }];
     
     if (isFromKiit && emailKiit) {
@@ -100,7 +100,7 @@ const registerStudent = async (req, res) => {
   }
 };
 
-// Login with emailOrPhone (unchanged, working correctly)
+// Login with emailOrPhone
 const loginStudent = async (req, res) => {
   try {
     const { emailOrPhone, password } = req.body;
