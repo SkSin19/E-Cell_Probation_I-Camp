@@ -6,12 +6,17 @@
 	--muted: #303237;
 }
 
-*{box-sizing: border-box}
-html,body{height:100%}
+html{
+	box-sizing: border-box;
+	height: 100%;
+}
+
 body{
-	margin:0;
+	box-sizing: border-box;
+	height: 100%;
+	margin: 0;
 	background: var(--bg);
-	color:#fff;
+	color: #fff;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -41,7 +46,7 @@ body{
 .card{
 	width:100%;
 	max-width: 340px;
-	aspect-ratio: 1 / 1; /*square ke liye hai*/
+	aspect-ratio: 1 / 1;
 	background: var(--card);
 	color: var(--text-dark);
 	border-radius: 28px;
@@ -52,11 +57,25 @@ body{
 	text-align:center;
 	padding: 24px;
 	box-shadow: 0 10px 30px rgba(0,0,0,.25);
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	cursor: pointer;
+	position: relative;
 }
 
-.featured{
-	background: var(--featured);
-	box-shadow: 0 18px 40px rgba(0,0,0,.35);
+@media (hover: hover) and (pointer: fine) {
+	.card:hover{
+		background: var(--featured);
+		box-shadow: 0 18px 40px rgba(0,0,0,.35);
+		transform: scale(1.05);
+	}
+}
+
+@media (hover: none) and (pointer: coarse) {
+	.card.active{
+		background: var(--featured);
+		box-shadow: 0 18px 40px rgba(0,0,0,.35);
+		transform: scale(1.02);
+	}
 }
 
 .card .icon img{
@@ -65,6 +84,12 @@ body{
 	display:block;
 	margin-bottom: 12px;
 	object-fit: contain;
+	transition: transform 0.3s ease;
+}
+
+.card:hover .icon img,
+.card.active .icon img{
+	transform: scale(1.1);
 }
 
 .card h3{
@@ -86,19 +111,31 @@ body{
 	.grid{
 		grid-template-columns: 1fr;
 		gap: 22px;
+		max-width: 520px;
+		margin: 0 auto;
 	}
 	.card{
-		max-width: 520px;
+		width: 100%;
+		max-width: 100%;
 		aspect-ratio: auto;
 		padding: 32px 24px;
 	}
 }
-@media (min-width: 901px){
-	.grid{ align-items: start; }
-
-	.featured{
-		aspect-ratio: auto;
-		min-height: 420px; 
+@media (min-width: 901px) and (max-width: 1100px){
+	.card{
+		max-width: 280px;
+	}
+	
+	.card:hover{
+		max-width: 320px;
 	}
 }
 
+@media (min-width: 901px){
+	.grid{ align-items: start; }
+
+	.card:hover{
+		aspect-ratio: auto;
+		min-height: 420px;
+	}
+}
