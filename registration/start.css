@@ -9,6 +9,7 @@ body {
     "Apple Color Emoji", "Segoe UI Emoji";
   overflow-x: hidden;
   overflow-y: hidden;
+   padding-top: 0 !important;
 }
 
 .background {

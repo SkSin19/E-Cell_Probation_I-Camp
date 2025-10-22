@@ -8,6 +8,8 @@ body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
     "Apple Color Emoji", "Segoe UI Emoji";
   overflow-x: hidden;
+  /* Override navbar.css padding to allow background behind navbar */
+  padding-top: 0 !important;
 }
 
 .background {
@@ -24,6 +26,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 20px;
+  /* Add top padding to account for navbar height */
+  padding-top: 140px;
 }
 
 .registration-container {
@@ -263,6 +267,7 @@ body {
 @media screen and (max-width: 1024px) {
   .background {
     padding: 15px;
+    padding-top: 140px;
     background-attachment: scroll;
   }
 
@@ -286,6 +291,7 @@ body {
 @media screen and (max-width: 767px) {
   .background {
     padding: 10px;
+    padding-top: 110px;
     background-attachment: scroll;
   }
 
@@ -342,6 +348,7 @@ body {
 @media screen and (max-width: 480px) {
   .background {
     padding: 8px;
+    padding-top: 100px;
   }
 
   .registration-container {
@@ -358,6 +365,7 @@ body {
 @media screen and (max-width: 360px) {
   .background {
     padding: 5px;
+    padding-top: 95px;
   }
 
   .registration-container {
@@ -371,5 +379,3 @@ body {
     gap: 0.75rem;
   }
 }
-
-
