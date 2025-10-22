@@ -25,6 +25,8 @@ body{
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 72px 24px 96px;
+	height: auto;
+	overflow: visible;
 }
 
 .title{
@@ -42,6 +44,8 @@ body{
 	gap: 28px;
 	align-items: stretch;
 	justify-items: center;
+	height: auto;
+	overflow: visible;
 }
 
 .card{
