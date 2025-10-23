@@ -89,7 +89,7 @@ button:focus-visible {
 }
 
 .top-date {
-    font-size: 10em;
+    font-size: 7em;
     font-weight: 900;
     letter-spacing: 0.05em;
     display: block;
@@ -171,12 +171,14 @@ button:focus-visible {
     background-image: url("https://ik.imagekit.io/boibhav17/Mob%20View/Rectangle%2023%20(4).png?updatedAt=1761139762285");
     overflow: hidden;
     width: 100%;
-    min-width: 330px;
-    min-height: 930px;
+    min-width: auto;
+    min-height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    object-fit: contain;
+    padding-bottom: 50rem;
 }
 
 .hero-sec-mobile-view .chatgpt-image-oct {
@@ -232,7 +234,7 @@ button:focus-visible {
 }
 
 /* Responsive Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .desktop-view {
         display: none;
     }
