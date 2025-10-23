@@ -1,22 +1,25 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: #000; 
+    background: #000;
+    overflow-x: hidden;
 }
 
 .background {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
 }
 
 .bg-main {
     position: absolute;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     z-index: 0;
 }
@@ -27,7 +30,7 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100vh;
+    min-height: 100vh;
     padding: 0 6vw;
 }
 
@@ -45,11 +48,13 @@ body, html {
 
 .date-card-bg {
     position: absolute;
-    width: 100%; height: 100%;
-    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     border-radius: 60px;
     z-index: 0;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.40);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.40);
 }
 
 .date-text {
@@ -129,7 +134,7 @@ body, html {
     font-weight: 800;
 }
 
-.timingAndVenue{
+.timingAndVenue {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -137,18 +142,286 @@ body, html {
     bottom: 3rem;
 }
 
-
+/* Tablet and smaller screens */
 @media (max-width: 1100px) {
     .content {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: auto;
-        padding: 5vw 0;
+        padding: 3rem 5vw;
     }
+
+    .date-card {
+        margin-bottom: 5rem;
+        margin-right: 4rem;
+        width: 380px;
+        height: 440px;
+    }
+
+    .top-date {
+        font-size: 8em;
+    }
+
+    .month {
+        font-size: 3.2em;
+    }
+
+    .rocket-img {
+        width: 400px;
+        margin-left: 50px;
+        margin-bottom: 120px;
+    }
+
     .dtv-details {
+        margin-left: 40px;
+    }
+
+    .heading {
+        font-size: 3.8rem;
+        margin-bottom: 350px;
+    }
+
+    .timingAndVenue {
+        left: 120px;
+        bottom: 2.5rem;
+    }
+}
+
+/* Medium tablets */
+@media (max-width: 900px) {
+    .content {
+        padding: 2.5rem 4vw;
+    }
+
+    .date-card {
+        width: 340px;
+        height: 400px;
+        margin-bottom: 4rem;
+        margin-right: 3rem;
+    }
+
+    .date-card-bg {
+        border-radius: 50px;
+    }
+
+    .top-date {
+        font-size: 7em;
+    }
+
+    .month {
+        font-size: 2.8em;
+    }
+
+    .rocket-img {
+        width: 350px;
+        margin-left: 40px;
+        margin-bottom: 100px;
+    }
+
+    .dtv-details {
+        margin-left: 30px;
+    }
+
+    .heading {
+        font-size: 3.2rem;
+        margin-bottom: 300px;
+    }
+
+    .timingAndVenue {
+        left: 100px;
+        bottom: 2rem;
+    }
+
+    .timing {
+        font-size: 2em;
+    }
+
+    .venue {
+        font-size: 1.7em;
+    }
+}
+
+/* Mobile landscape and portrait */
+@media (max-width: 768px) {
+    body, html {
+        height: auto;
+    }
+
+    .background {
+        min-height: 100vh;
+        height: auto;
+    }
+
+    .content {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 2rem 6vw;
+        min-height: 100vh;
+        height: auto;
+    }
+
+    .dtv-details {
+        order: 1;
         margin-left: 0;
-        align-items: center;
-        margin-top: 36px;
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+
+    .heading {
+        font-size: 2.5rem;
+        margin-bottom: 0;
+        margin-left: 0;
+        text-align: left;
+        line-height: 1.2;
+    }
+
+    .rocket-graphic {
+        order: 2;
+        width: 100%;
+        height: auto;
+        margin: 2rem auto;
+        justify-content: center;
+    }
+
+    .rocket-img {
+        width: 280px;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
+    .date-card {
+        order: 3;
+        width: 280px;
+        height: 320px;
+        margin: 2rem 0 0 0;
+        align-self: flex-start;
+    }
+
+    .date-card-bg {
+        border-radius: 45px;
+    }
+
+    .top-date {
+        font-size: 5.5em;
+    }
+
+    .month {
+        font-size: 2.2em;
+        margin-top: 5px;
+    }
+
+    .timingAndVenue {
+        position: static;
+        order: 4;
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    .timing {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .timing .pm {
+        position: relative;
+    }
+
+    .venue {
+        font-size: 1.5em;
+        line-height: 1.3;
+    }
+}
+
+/* Small mobile - matching your image */
+@media (max-width: 480px) {
+    .content {
+        padding: 2rem 6vw;
+        min-height: 100vh;
+    }
+
+    .dtv-details {
+        margin-bottom: 1.5rem;
+    }
+
+    .heading {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .rocket-graphic {
+        margin: 1.5rem auto;
+    }
+
+    .rocket-img {
+        width: 220px;
+    }
+
+    .date-card {
+        width: 240px;
+        height: 280px;
+        margin-top: 1.5rem;
+    }
+
+    .date-card-bg {
+        border-radius: 40px;
+    }
+
+    .top-date {
+        font-size: 4.5em;
+        margin-top: 0;
+    }
+
+    .month {
+        font-size: 1.8em;
+        letter-spacing: 0.25em;
+    }
+
+    .timingAndVenue {
+        margin-top: 1.5rem;
+    }
+
+    .timing {
+        font-size: 1.5em;
+        font-weight: 800;
+    }
+
+    .venue {
+        font-size: 1.3em;
+        line-height: 1.4;
+    }
+}
+
+/* Extra small mobile */
+@media (max-width: 360px) {
+    .content {
+        padding: 1.5rem 5vw;
+    }
+
+    .heading {
+        font-size: 1.8rem;
+    }
+
+    .rocket-img {
+        width: 200px;
+    }
+
+    .date-card {
+        width: 220px;
+        height: 260px;
+    }
+
+    .top-date {
+        font-size: 4em;
+    }
+
+    .month {
+        font-size: 1.6em;
+    }
+
+    .timing {
+        font-size: 1.3em;
+    }
+
+    .venue {
+        font-size: 1.2em;
     }
 }
