@@ -119,6 +119,34 @@ body {
     margin: 0 !important;
 }
 
+.user-profile[style*="display: flex"] {
+    display: flex !important;
+}
+
+.mobile-user-profile {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .user-profile {
+        display: none !important;
+    }
+
+    .mobile-user-profile {
+        display: none !important;
+        position: fixed;
+        top: 15px;
+        right: 60px;
+        z-index: 102;
+        margin: 0 !important;
+        align-items: center;
+    }
+
+    .mobile-user-profile[style*="display: flex"] {
+        display: flex !important;
+    }
+}
+
 .user-profile-btn {
     width: 45px;
     height: 45px;
@@ -153,12 +181,83 @@ body {
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.3s ease;
+    max-width: calc(100vw - 20px);
 }
 
 .user-dropdown.show {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .user-dropdown {
+        position: fixed;
+        top: auto;
+        right: 10px;
+        bottom: auto;
+        background: #2b2b2b;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        z-index: 1001;
+        min-width: 180px;
+        max-width: calc(100vw - 20px);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px) scale(0.95);
+        transition: all 0.3s ease;
+        margin-top: 10px;
+    }
+
+    .user-profile {
+        position: relative;
+    }
+
+    .user-dropdown.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .user-dropdown {
+        min-width: 160px;
+        right: 5px;
+        max-width: calc(100vw - 10px);
+    }
+
+    .user-dropdown-item {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-dropdown {
+        min-width: 150px;
+        right: 0;
+        max-width: calc(100vw - 10px);
+    }
+
+    .user-dropdown-item {
+        padding: 9px 12px;
+        font-size: 13px;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 360px) {
+    .user-dropdown {
+        min-width: 140px;
+        right: -5px;
+        max-width: calc(100vw - 10px);
+    }
+
+    .user-dropdown-item {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
 }
 
 .user-dropdown-item {
@@ -418,6 +517,19 @@ img {
         height: 45px;
         max-width: 80px;
     }
+
+    .user-profile {
+        position: fixed;
+        top: 15px;
+        right: 60px;
+        z-index: 102;
+    }
+
+    .user-profile-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -469,6 +581,19 @@ img {
     img {
         height: 40px;
         max-width: 70px;
+    }
+
+    .mobile-user-profile {
+        position: fixed;
+        top: 12px;
+        right: 50px;
+        z-index: 102;
+    }
+
+    .user-profile-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
     }
 }
 
@@ -522,6 +647,24 @@ img {
         height: 38px;
         max-width: 65px;
     }
+
+    .mobile-user-profile {
+        position: fixed;
+        top: 10px;
+        right: 45px;
+        z-index: 102;
+    }
+
+    .user-profile-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    .user-dropdown {
+        min-width: 145px !important;
+        right: -10px !important;
+    }
 }
 
 @media (max-width: 360px) {
@@ -574,6 +717,29 @@ img {
         height: 35px;
         max-width: 60px;
     }
+
+    .mobile-user-profile {
+        position: fixed;
+        top: 8px;
+        right: 40px;
+        z-index: 102;
+    }
+
+    .user-profile-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 15px;
+    }
+
+    .user-dropdown {
+        min-width: 135px !important;
+        right: -15px !important;
+    }
+
+    .user-dropdown-item {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 320px) {
@@ -625,5 +791,28 @@ img {
     img {
         height: 32px;
         max-width: 55px;
+    }
+
+    .mobile-user-profile {
+        position: fixed;
+        top: 6px;
+        right: 35px;
+        z-index: 102;
+    }
+
+    .user-profile-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .user-dropdown {
+        min-width: 125px !important;
+        right: -20px !important;
+    }
+
+    .user-dropdown-item {
+        padding: 7px 8px;
+        font-size: 11px;
     }
 }

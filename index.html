@@ -1,106 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>I-CAMP: Igniting Ideas, Building Futures</title>
-    <link rel="icon" type="image/png" href="https://ik.imagekit.io/ilgcom35w/kiitecelllogo-removebg-preview.png?updatedAt=1761159944097">
-    <link rel="stylesheet" href="hero/hero.css">
-    <link rel="stylesheet" href="navbar/navbar.css">
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://ik.imagekit.io/ilgcom35w/kiitecelllogo-removebg-preview.png?updatedAt=1761159944097"
+    />
+    <link rel="stylesheet" href="hero/hero.css" />
+    <link rel="stylesheet" href="navbar/navbar.css" />
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="navbar-logo">
-            <a href="#"><img
-                    src="https://ik.imagekit.io/oi8av1p5e/d92a158af390825f1841a73595e212740e04e9c1.png?updatedAt=1761031594799"
-                    alt="I-CAMP Logo"></a>
+      <div class="navbar-logo">
+        <a href="#"
+          ><img
+            src="https://ik.imagekit.io/oi8av1p5e/d92a158af390825f1841a73595e212740e04e9c1.png?updatedAt=1761031594799"
+            alt="I-CAMP Logo"
+        /></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#highlights">HIGHLIGHTS</a></li>
+        <li class="logo">
+          <a href="#"
+            ><img
+              src="https://ik.imagekit.io/oi8av1p5e/d92a158af390825f1841a73595e212740e04e9c1.png?updatedAt=1761031594799"
+              alt="I-CAMP Logo"
+          /></a>
+        </li>
+        <li><a href="#aboutus">ABOUT US</a></li>
+        <li><a href="#footer">CONTACT US</a></li>
+        <li><a href="#faq">FAQs</a></li>
+        <li class="nav-spacer"></li>
+        <li>
+          <a href="./login/start.html" class="nav-button login-button">LOGIN</a>
+        </li>
+        <li>
+          <a href="./registration/start.html" class="nav-button register-button"
+            >REGISTER</a
+          >
+        </li>
+        <li class="user-profile">
+          <button class="user-profile-btn" title="Profile">👤</button>
+          <div class="user-dropdown">
+            <div class="user-dropdown-item" id="user-name">Profile</div>
+            <a href="#" class="user-dropdown-item logout-btn">🚪 Logout</a>
+          </div>
+        </li>
+      </ul>
+      <div class="user-profile mobile-user-profile">
+        <button class="user-profile-btn" title="Profile">👤</button>
+        <div class="user-dropdown">
+          <div class="user-dropdown-item" id="mobile-user-name">Profile</div>
+          <a href="#" class="user-dropdown-item logout-btn">🚪 Logout</a>
         </div>
-            <ul class="nav-links">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#highlights">HIGHLIGHTS</a></li>
-                <li class="logo">
-                    <a href="#"><img src="https://ik.imagekit.io/oi8av1p5e/d92a158af390825f1841a73595e212740e04e9c1.png?updatedAt=1761031594799" alt="I-CAMP Logo"></a>
-                </li>
-                <li><a href="#aboutus">ABOUT US</a></li>
-                <li><a href="#footer">CONTACT US</a></li>
-                <li><a href="#faq">FAQs</a></li>
-                <li class="nav-spacer"></li>
-                <li><a href="./login/start.html" class="nav-button login-button">LOGIN</a></li>
-                <li><a href="./registration/start.html" class="nav-button register-button">REGISTER</a></li>
-                <li class="user-profile">
-                    <button class="user-profile-btn" title="Profile">👤</button>
-                    <div class="user-dropdown">
-                        <div class="user-dropdown-item" id="user-name">Profile</div>
-                        <a href="#" class="user-dropdown-item logout-btn">🚪 Logout</a>
-                    </div>
-                </li>
-            </ul>
-            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      </div>
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
     </nav>
     <section id="home" class="hero" aria-label="I-Camp">
-        <h1 class="title">
-            <span >I-CAMP:</span> Igniting Ideas,<br>Building Futures
-        </h1>
+      <h1 class="title">
+        <span>I-CAMP:</span> Igniting Ideas,<br />Building Futures
+      </h1>
 
-        <picture>
-            <source media="(max-width: 768px)" srcset="assets/images/rocketMobile.png">
-            <img src="assets/images/rocket.png" alt="Rocket" class="rocket" />
-        </picture>
+      <picture>
+        <source
+          media="(max-width: 768px)"
+          srcset="assets/images/rocketMobile.png"
+        />
+        <img src="assets/images/rocket.png" alt="Rocket" class="rocket" />
+      </picture>
 
-        <picture>
-            <source media="(max-width: 768px)" srcset="https://ik.imagekit.io/oi8av1p5e/Group%2027.png?updatedAt=1761079839858" >
-            <img src="https://ik.imagekit.io/oi8av1p5e/Rectangle%207.png?updatedAt=1761032626060" alt="Fog layer 1" class="fog fog--1" />
-        </picture>
-        <picture>
-            <source media="(max-width: 768px)" srcset="https://ik.imagekit.io/oi8av1p5e/Group%2028.png?updatedAt=1761079839782">
-            <img src="https://ik.imagekit.io/oi8av1p5e/Rectangle%208.png?updatedAt=1761032703276" alt="Fog layer 2" class="fog fog--2" />
-        </picture>
-        <picture>
-            <source media="(max-width: 768px)" srcset="https://ik.imagekit.io/oi8av1p5e/Group%2021.png?updatedAt=1761079839861">
-            <img src="https://ik.imagekit.io/oi8av1p5e/Rectangle%209.png?updatedAt=1761032702825" alt="Fog layer 3" class="fog fog--3" />
-        </picture>
+      <picture>
+        <source
+          media="(max-width: 768px)"
+          srcset="
+            https://ik.imagekit.io/oi8av1p5e/Group%2027.png?updatedAt=1761079839858
+          "
+        />
+        <img
+          src="https://ik.imagekit.io/oi8av1p5e/Rectangle%207.png?updatedAt=1761032626060"
+          alt="Fog layer 1"
+          class="fog fog--1"
+        />
+      </picture>
+      <picture>
+        <source
+          media="(max-width: 768px)"
+          srcset="
+            https://ik.imagekit.io/oi8av1p5e/Group%2028.png?updatedAt=1761079839782
+          "
+        />
+        <img
+          src="https://ik.imagekit.io/oi8av1p5e/Rectangle%208.png?updatedAt=1761032703276"
+          alt="Fog layer 2"
+          class="fog fog--2"
+        />
+      </picture>
+      <picture>
+        <source
+          media="(max-width: 768px)"
+          srcset="
+            https://ik.imagekit.io/oi8av1p5e/Group%2021.png?updatedAt=1761079839861
+          "
+        />
+        <img
+          src="https://ik.imagekit.io/oi8av1p5e/Rectangle%209.png?updatedAt=1761032702825"
+          alt="Fog layer 3"
+          class="fog fog--3"
+        />
+      </picture>
     </section>
 
     <section id="aboutus">
-        <iframe src="./aboutus/AboutUs.html" style="width:100%;height:100vh;border:none;display:block;"></iframe>
+      <iframe
+        src="./aboutus/AboutUs.html"
+        style="width: 100%; height: 110vh; border: none; display: block"
+      ></iframe>
     </section>
-    
+
     <section id="highlights">
-        <iframe src="./programHighlight/programHighlight.html" style="width:100%;height:100vh;border:none;display:block;"></iframe>
+      <iframe
+        src="./programHighlight/programHighlight.html"
+        style="width: 100%; height: 100vh; border: none; display: block"
+      ></iframe>
     </section>
     <section id="dateTimeVenue">
-        <iframe src="/datetimevenue-merged/merged_datetime_venue.html" style="width:100%;height:100vh;border:none;display:block;"></iframe>
+      <iframe
+        src="/datetimevenue-merged/merged_datetime_venue.html"
+        style="width: 100%; height: 100vh; border: none; display: block"
+      ></iframe>
     </section>
     <section id="companies">
-        <iframe src="companies/company.html" style="width:100%;height:100vh;border:none;display:block;"></iframe>
+      <iframe
+        src="companies/company.html"
+        style="width: 100%; height: 100vh; border: none; display: block"
+      ></iframe>
     </section>
     <section id="faq">
-        <iframe src="faq/faq.html" style="width:100%;height:100vh;border:none;display:block;"></iframe>
+      <iframe
+        src="faq/faq.html"
+        style="width: 100%; height: 100vh; border: none; display: block"
+      ></iframe>
     </section>
     <section id="terms">
-        <iframe src="./tospp/terms.html" style="width:100%;height:100vh;border:none;display:block;"></iframe>
+      <iframe
+        src="./tospp/terms.html"
+        style="width: 100%; height: 100vh; border: none; display: block"
+      ></iframe>
     </section>
-     
+
     <section id="footer">
-        <iframe src="footer/footer.html" style="width:100%;height:400px;border:none;display:block;"></iframe>
+      <iframe
+        src="footer/footer.html"
+        style="width: 100%; height: 400px; border: none; display: block"
+      ></iframe>
     </section>
 
     <script>
-        
-        function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('open');
-        }
-        // Close menu when any link is clicked
-        document.addEventListener("DOMContentLoaded", () => {
+      function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("open");
+      }
+      // Close menu when any link is clicked
+      document.addEventListener("DOMContentLoaded", () => {
         const navLinks = document.querySelectorAll(".nav-links a");
-        navLinks.forEach(link => {
-            link.addEventListener("click", () => {
-        document.querySelector(".nav-links").classList.remove("open");
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            document.querySelector(".nav-links").classList.remove("open");
+          });
+        });
       });
-    });
-  });
-    
     </script>
     <script src="navbar/navbar.js"></script>
-</body>
+  </body>
 </html>
