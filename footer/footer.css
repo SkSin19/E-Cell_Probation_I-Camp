@@ -65,6 +65,13 @@ a {
     line-height: 1.4;
 }
 
+.contact-item i {
+    color: #000000;
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
+}
+
 .menu-left ul, .menu-right ul {
     list-style: none;
     padding: 0;
