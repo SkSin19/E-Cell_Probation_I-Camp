@@ -94,6 +94,16 @@
       transform: translateY(-50%);
     }
 
+    .screenSectionBar{
+        position: fixed;
+        width: 100%;
+        height: 5rem;
+        background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.9), transparent);
+        bottom: -2.5rem;
+        left: 0;
+        z-index: 10;
+    }
+
     @media screen and (max-width: 1200px) {
       .about-container {
         padding: 60px 0 60px 50px;
@@ -346,6 +356,7 @@
         class="man-img"
       />
     </div>
+    <div class="screenSectionBar"></div>
   </section>
   <script>
     // If this page is embedded (e.g., inside the home page iframe), hide its own navbar
