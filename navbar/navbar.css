@@ -75,15 +75,17 @@ body {
 }
 
 .nav-button {
-    padding: 0.6rem 1.5rem !important;
+    padding: 0.5rem 1rem !important;
     border-radius: 25px !important;
     font-weight: 500 !important;
-    font-size: 14px !important;
+    font-size: 12px !important;
     transition: all 0.3s ease !important;
     border: 2px solid transparent !important;
     display: inline-block !important;
     text-align: center !important;
-    margin: 0 0.4rem !important;
+    margin: 0 0.3rem !important;
+    z-index: 1000 !important;
+    white-space: nowrap;
 }
 
 .login-button {
@@ -341,6 +343,7 @@ img {
     max-width: 70px;
 }
 
+
 @media (max-width: 1024px) {
     body {
         padding-top: 100px;
@@ -377,6 +380,19 @@ img {
         height: 50px;
         max-width: 90px;
     }
+
+    .login-button {
+        color: #ff9800 !important;
+        border-color: #ff9800 !important;
+        margin-bottom: 12px !important;
+    }
+
+    .register-button {
+        background: radial-gradient(50% 50% at 50% 50%, #fbaa24 0%, #f47527 100%) !important;
+        color: #fff !important;
+        border-color: #f47527 !important;
+        margin-bottom: 12px !important;
+    }
 }
 
 @media (max-width: 900px) {
@@ -410,6 +426,20 @@ img {
     img {
         height: 45px;
         max-width: 80px;
+    }
+
+
+    .login-button {
+        color: #ff9800 !important;
+        border-color: #ff9800 !important;
+        margin-bottom: 12px !important;
+    }
+
+    .register-button {
+        background: radial-gradient(50% 50% at 50% 50%, #fbaa24 0%, #f47527 100%) !important;
+        color: #fff !important;
+        border-color: #f47527 !important;
+        margin-bottom: 12px !important;
     }
 }
 
