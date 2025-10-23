@@ -76,13 +76,12 @@
     .rectangle-img2 {
       position: absolute;
       width: 460px;
-      height: 100vh; /* fill viewport height on large screens */
+      height: 100vh; 
       object-fit: cover;
       z-index: 2;
       right: 0;
-      top: 0;            /* anchor to the top */
-      bottom: 0;         /* allow it to touch the bottom */
-      transform: none;   /* no vertical centering */
+        top: 0;
+      transform: none;   
     }
 
     .man-img {
@@ -95,7 +94,6 @@
       transform: translateY(-50%);
     }
 
-    /* Responsive Design */
     @media screen and (max-width: 1200px) {
       .about-container {
         padding: 60px 0 60px 50px;
@@ -297,7 +295,6 @@
         margin: 10px 0;
       }
     }
-    /* Desktop override: full-height rectangle */
     @media screen and (min-width: 901px) {
       .rectangle-img2 {
         height: 100vh;
