@@ -13,6 +13,35 @@
     <link rel="stylesheet" href="navbar/navbar.css" />
   </head>
   <body>
+    <style>
+      .programHighlight-iframe {
+        min-height: 120vh;
+        width: 100%;
+        border: none;
+      }
+      @media (max-width: 768px) {
+        .programHighlight-iframe {
+          min-height: 160vh;
+          border: none;
+        }
+      }
+      @media (max-width: 450px) {
+        .programHighlight-iframe {
+          min-height: 180vh;
+          border: none;
+          overflow-y: hidden;
+        }
+      }
+      @media (max-width: 1024px) {
+        .programHighlight-iframe {
+          min-height: 150vh;
+          border: none;
+        }
+        ::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    </style>
     <nav class="navbar">
       <div class="navbar-logo">
         <a href="#"
@@ -65,6 +94,8 @@
         <span>I-CAMP:</span> Igniting Ideas,<br />Building Futures
       </h1>
           <div class="screenSectionBar"></div>
+
+          
 
 
       <picture>
@@ -126,7 +157,7 @@
     <section id="highlights">
       <iframe
         src="./programHighlight/programHighlight.html"
-        style="width: 100%; height: 100vh; border: none; display: block"
+        class = "programHighlight-iframe"
       ></iframe>
     </section>
     <section id="dateTimeVenue">
