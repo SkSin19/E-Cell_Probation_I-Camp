@@ -238,6 +238,13 @@ body {
         padding: 10px 15px;
         font-size: 14px;
     }
+    
+}
+
+@media (min-width: 601px) and (max-width: 767px) {
+    .mobile-user-profile {
+        right: 5rem !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -522,6 +529,7 @@ img {
         border-color: #f47527 !important;
         margin-bottom: 12px !important;
     }
+    
 
     .logo {
         order: -1;
@@ -625,7 +633,7 @@ img {
     .mobile-user-profile {
         position: fixed;
         top: 12px;
-        right: 50px;
+        right: 5rem;
         z-index: 102;
     }
 
